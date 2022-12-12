@@ -2,15 +2,15 @@
 {
     class SayiTahminEtmeServices
     {
-        int[] _sayilar = new int[10]
+        int[] _sayilar = new int[11]
         {
-            1, 2 , 3, 4, 5, 6, 7, 8, 9, 10
+            0, 1, 2 , 3, 4, 5, 6, 7, 8, 9, 10
         };
         Random _rastgele = new Random();
         public int SayiSec()
         {
 
-            int rastgeleIndex = _rastgele.Next(0, 10);
+            int rastgeleIndex = _rastgele.Next(0, 11);
             return rastgeleIndex;
 
         }
@@ -18,7 +18,7 @@
         {
             int bilgisayarSayiIndex = SayiSec();
             return $"{kullanici} : {_sayilar[kullaniciSayiIndex]}\n" +
-                   $"Bilgisayar: {_sayilar[bilgisayarSayiIndex]} \n" +
+                 //  $"Bilgisayar: {_sayilar[bilgisayarSayiIndex]} \n" +
                    $"Sonuç: {SonucBul(bilgisayarSayiIndex, kullaniciSayiIndex, kullanici)} ";
                    
         }

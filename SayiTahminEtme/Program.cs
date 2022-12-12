@@ -16,16 +16,16 @@ namespace SayiTahminEtme
 
 
             SayiTahminEtmeServices servis = new SayiTahminEtmeServices();
-            Console.Write("Sayı Giriniz  Çıkış(*):  ");
-            int giris = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Sayı Giriniz  Çıkış(ç):  ");
+            string giris = Console.ReadLine();
             string sonuc;
 
-            while (giris != 'ç' )
+            while (giris != "ç" )
             {
                 Console.WriteLine($"Oyuncu: {oyuncu.Kullanici}");
-                Console.WriteLine(servis.Oyna(giris, oyuncu.Kullanici));
-                Console.Write("Sayı Giriniz:  ,  Çıkış(0):  ");
-                giris = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(servis.Oyna(Convert.ToInt32(giris), oyuncu.Kullanici));
+                Console.Write("Sayı Giriniz:  ,  Çıkış(ç):  ");
+                giris = Console.ReadLine();
             }
         }
     }
